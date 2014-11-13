@@ -1,0 +1,13 @@
+Nom: Ozeray 
+Prénom: Etienne
+Sites: http://etienneozeray.fr
+Nom du projet1: Pour un design graphique libre
+Site du projet1 :  http://etienneozeray.fr/libre-blog
+Mot clés projet1: libre, open-source, design graphique
+Nom du projet2: Untitled
+Site du projet2: http://etienneozeray.fr/GP
+Mot clés projet2: libre, open-source, design graphique, collaboration, autonomie
+Collaborateurs: Alexandre Liziard
+École: ENSAD
+Discipline: Design graphique
+Lieu: Paris
