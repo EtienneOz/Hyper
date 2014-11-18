@@ -6,4 +6,4 @@ Plateforme contributive permettant de mettre en commun les recherches et référ
 Maquette
 ========
 
-[!première maquette](https://raw.githubusercontent.com/EtienneOz/Hyper/master/maquette/maquette.png)
+![première maquette](https://raw.githubusercontent.com/EtienneOz/Hyper/master/maquette/maquette.png)
