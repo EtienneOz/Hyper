@@ -1,13 +1,33 @@
-Nom: Ozeray 
-Prénom: Etienne
-Sites: http://etienneozeray.fr
-Nom du projet1: Pour un design graphique libre
-Site du projet1 :  http://etienneozeray.fr/libre-blog
-Mot clés projet1: libre, open-source, design graphique
-Nom du projet2: Untitled
-Site du projet2: http://etienneozeray.fr/GP
-Mot clés projet2: libre, open-source, design graphique, collaboration, autonomie
-Collaborateurs: Alexandre Liziard
-École: ENSAD
-Discipline: Design graphique
-Lieu: Paris
+# Fiche générée par la soumission du formulaire, les données sont séparées
+# par des virgules.
+# Pour les références, données en deux valeurs auteur et œuvre, à indiquer
+# comme ceci: Références du projet1 = [auteur, œuvre], [auteur, œuvre].
+# L'œuvre est optionnelle.
+
+Nom = Ozeray
+Prénom = Etienne
+Sites = http://etienneozeray.fr
+École = ENSAD
+Discipline = Design graphique, programmation
+Lieu = Paris
+Nom du projet1 = Pour un design graphique libre
+	Site(s) du projet1  =  http://etienneozeray.fr/libre-blog
+	Thèmes du projet1 = libre, open-source, design graphique, mémoire, outils
+	Médiums du projet1 = Livre, Écrits, Site web
+	Références théoriques du projet1 = [Ivan Illich, La Convivialité], [Sébastien Broca, Utopie du logiciel libre], [OSP, Relearn], [Richard Stallman], [Bernard Stiegler]
+	Références pratiques du projet1 = [OSP] 
+	Collaborateurs du projet1 =
+Nom du projet2 = Untitled
+	Site du projet2 = http://etienneozeray.fr/GP
+	thèmes du projet2 = libre, open-source, design graphique, collaboration, autonomie, outils, ouverture, contribution, échange
+	Médiums du projet2 = Livres, Écrits, Sites web, outils, 
+	Références théoriques du projet2 = [Ivan Illich, La Convivialité], [Sébastien Broca, Utopie du logiciel libre], [OSP, Relearn], [Bernard Stiegler]
+	Références pratiques du projet2 = [Thomas Hirschorn, Flamme éternelle]
+	Collaborateurs du projet2 = Alexandre Liziard
+Nom du projet3 = Boxon
+	Site du projet2 = http://boxon.info
+	thèmes du projet2 = libre, open-source, design graphique, collaboration, outils, ouverture, contribution, échange
+	Médiums du projet2 = Sites web, Outils 
+	Références théoriques du projet2 = [Ivan Illich, La Convivialité], [Sébastien Broca, Utopie du logiciel libre], [OSP, Relearn]
+	Références pratiques du projet2 = [Git]
+	Collaborateurs du projet2 = Antoine Gelgon, Xavier Klein, Ivan Murit, Alexandre Cornier

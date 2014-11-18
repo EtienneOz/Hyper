@@ -1,0 +1,34 @@
+# Fiche générée par la soumission du formulaire, les données sont séparées
+# par des virgules.
+# Pour les références, données en deux valeurs auteur et œuvre, à indiquer
+# comme ceci: Références du projet1 = [auteur, œuvre], [auteur, œuvre].
+# L'œuvre est optionnelle.
+
+Nom = 
+Prénom = 
+Sites = 
+École = 
+Discipline = 
+Lieu = 
+Nom du projet1 = 
+	Site(s) du projet1  =  
+	Thèmes du projet1 = 
+	Médiums du projet1 = 
+	Références théoriques du projet1 = 
+	Références pratiques du projet1 = 
+	Collaborateurs du projet1 =
+Nom du projet2 = Untitled
+	Site du projet2 =
+	thèmes du projet2 =
+	Médiums du projet2 =
+	Références théoriques du projet2 =
+	Références pratiques du projet2 =
+	Collaborateurs du projet2 =
+Nom du projet3 =
+	Site du projet2 =
+	thèmes du projet2 = 
+	Médiums du projet2 = 
+	Références théoriques du projet2 = 
+	Références pratiques du projet2 = 
+	Collaborateurs du projet2 = 
+
