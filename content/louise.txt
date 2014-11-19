@@ -1,0 +1,34 @@
+# Fiche générée par la soumission du formulaire, les données sont séparées
+# par des virgules.
+# Pour les références, données en deux valeurs auteur et œuvre, à indiquer
+# comme ceci: Références du projet1 = [auteur, œuvre], [auteur, œuvre].
+# L'œuvre est optionnelle.
+
+Nom = Drulhe
+Prénom = Louise
+Site(s) = http://louisedrulhe.fr
+École(s) = ENSAD
+Discipline(s) = Design Graphique
+Lieu(x) = Paris
+Nom du projet1 = Design Fluide
+	Site(s) du projet1  =   http://louisedrulhe.fr/designfluide
+	Thème(s) du projet1 = Design fluide, Biens communs, Open-source, Métadonnées, Mème Internet, Web sémantique, Contribution
+	Médium(s) du projet1 = Edition, Siteweb, Théorie
+	Référence(s) théorique(s) du projet1 = [Bernard Stiegler], [Pierre Levy], [Sébastien Broca], [Boris Beaude], [James Surowiecki], [Metahaven]
+	Référence(s) pratique(s) du projet1 = /
+	Collaborateur(s) du projet1 =/
+Nom du projet2 = Altas d'Internet
+	Site(s) du projet2 = http://louisedrulhe.fr/lab
+	thème(s) du projet2 = Internet, exercice conceptuel, spatialisation, Atlas, Critique, Complexité, Contraintes
+	Médium(s) du projet2 = Cartes, Editions, Installations
+	Référence(s) théorique(s) du projet2 = [Boris Beaude], [Hérodote]
+	Référence(s) pratique(s) du projet2 = /
+	Collaborateur(s) du projet2 = /
+Nom du projet3 =
+	Site(s) du projet3 =
+	thème(s) du projet3 =
+	Médium(s) du projet3 =
+	Référence(s) théorique(s) du projet3 =
+	Référence(s) pratique(s) du projet3 =
+	Collaborateur(s) du projet3 =
+
