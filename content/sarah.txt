@@ -1,0 +1,19 @@
+# Fiche générée par la soumission du formulaire, les données sont séparées
+# par des virgules.
+# Pour les références, données en deux valeurs auteur et œuvre, à indiquer
+# comme ceci: Références du projet1 = [auteur, œuvre], [auteur, œuvre].
+# L'œuvre est optionnelle.
+
+Nom = Garcin
+Prénom = Sarah
+Site(s) = http://sarahgarcin.com
+École(s) = ENSAD
+Discipline(s) = Design graphique
+Lieu(x) = Paris
+Nom du projet1 = Ping
+	Site(s) du projet1  = http://c.sarahgarcin.com
+	Thème(s) du projet1 = logiciels libre, collaboration, prise de notes, documentation
+	Médium(s) du projet1 = web
+	Référence(s) théorique(s) du projet1 = [Ivan Illich, La convivialité], [Gilbert Simondon, Modes d’existence des objets techniques]
+	Référence(s) pratique(s) du projet1 = 
+	Collaborateur(s) du projet1 = Victor Lebeau
