@@ -25,19 +25,21 @@
 			$lines = $fileContents;
 			 
 			// now loop through the array to print the contents of the file
-			foreach ($lines as $line)
-			{
+			foreach ($lines as $line){
+			
 				if(strpos($line, $search_string) !== false) {
-	        list(, $first_name) = explode(" =", $line);
-	        // If you don't want the space before the word bong, uncomment the following line.
-	        $first_name = trim($first_name);
-      	}
+			        list(, $first_name) = explode(" =", $line);
+			        // remove the space before the first name
+			        $first_name = trim($first_name);
+	      		}
+	      		//echo every lines			
 				// echo ($line) . '<br>';
 			}
+
+			//echo a specific line
 			// echo ($lines[7]);
 			echo $first_name.'</br>';
 		}
-
 
 	?>
 
