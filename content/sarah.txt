@@ -6,14 +6,15 @@
 
 Nom = Garcin
 Prénom = Sarah
-Site(s) = http://sarahgarcin.com
-École(s) = ENSAD
-Discipline(s) = Design graphique
-Lieu(x) = Paris
-Nom du projet1 = Ping
-	Site(s) du projet1  = http://c.sarahgarcin.com
-	Thème(s) du projet1 = logiciels libre, collaboration, prise de notes, documentation
-	Médium(s) du projet1 = web
-	Référence(s) théorique(s) du projet1 = [Ivan Illich, La convivialité], [Gilbert Simondon, Modes d’existence des objets techniques]
-	Référence(s) pratique(s) du projet1 = 
-	Collaborateur(s) du projet1 = Victor Lebeau
+Sites = http://sarahgarcin.com
+Écoles = EnsAD
+Disciplines = Design graphique
+Lieux = Paris
+Projet1 = Ping
+	Résumé1 = Untitled
+	Description1 = Untitled
+	Sites1  = http://c.sarahgarcin.com
+	Thèmes1 = Logiciels libre, Collaboration, Prise de notes, Documentation
+	Médiums1 = Web
+	RéférencesThéoriques1 = [Ivan Illich, La convivialité], [Gilbert Simondon, Du Mode d’existence des objets techniques]
+	Collaborateurs1 =Victor Lebeau
