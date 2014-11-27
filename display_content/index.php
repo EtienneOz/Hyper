@@ -13,7 +13,7 @@
 		//scan every files in a directory
 		$files = scandir('../content/');
 		//variables for searching specific element in the content
-		$search_string = "Prénom";
+		$search_firstname = "Prénom";
 
 		//foreach on each files in a specific directory
 		foreach($files as $file) {
@@ -27,7 +27,7 @@
 			// now loop through the array to print the contents of the file
 			foreach ($lines as $line){
 			
-				if(strpos($line, $search_string) !== false) {
+				if(strpos($line, $search_firstname) !== false) {
 			        list(, $first_name) = explode(" =", $line);
 			        // remove the space before the first name
 			        $first_name = trim($first_name);
