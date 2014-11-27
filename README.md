@@ -1,4 +1,4 @@
-h.ref
+h->ref
 =====
 
 Plateforme contributive permettant de mettre en commun les recherches et références entre designers.
