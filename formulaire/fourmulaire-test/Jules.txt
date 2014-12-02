@@ -1,0 +1,13 @@
+Jules
+Nom = Vaulont
+Site(s) = jules.vaulont.net
+École(s) = Ensad
+Discipline(s) = design
+Lieu(x) = Paris
+Nom du projet1 = Jules lele
+Site(s) du Projet1 = a
+Thème(s) du Projet1 = b
+Médium(s) = sdf
+Référence(s) théorique(s) du Projet1 = sdf
+Référence(s) pratique(s) du Projet1 = sdf
+Collaborateur(s) du projet1 = sdf

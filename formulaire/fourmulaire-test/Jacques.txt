@@ -1,0 +1,13 @@
+Prénom = Martin
+Nom = Jacques
+Site(s) = site jacques
+École(s) = école jacques
+Discipline(s) = jacques
+Lieu(x) = lieu(x) Jacques
+Nom du projet1 = projet jacques
+Site(s) du Projet1 = site jacques
+Thème(s) du Projet1 = thème jacques
+Médium(s) = médium jacques
+Référence(s) théorique(s) du Projet1 = ref théorique jacques
+Référence(s) pratique(s) du Projet1 = ref pratique jacques
+Collaborateur(s) du projet1 = collabos

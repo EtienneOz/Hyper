@@ -1,39 +1,35 @@
 html {
   height: 100%;
-	font-family: 'monospace';
-	font-size:30px;
+	font-family: monospace;
+	font-size:14px;
+  line-height: 40px;
+  word-spacing: -3px;
 }
 
 body {
   height: 100%;
 }
 
-.texte{
-	line-height: 160%;
-	margin:70px 70px 70px 90px;
+input{
+  border: 1px gray dotted;
+  margin-left: 25px;
+  font-family: monospace;
+  font-size:14px;
+  word-spacing: -3px;
+  color: gray;
+  padding: 5px;
 }
 
-span{
-	color:red;
+input#save_data{
+color: black;
+font-family: arial;
+letter-spacing: 5px;
+text-transform: uppercase;
+cursor: pointer;
+margin-left: 0px;
+border: 0px;
 }
 
-/* You can modify the following part for transition speed and text style */
-
-.fly{
-	color:red;
-	position:absolute;
-  transition: all 2s ease-in-out;
-    -webkit-transition: all 3s ease-in-out; /** Chrome & Safari **/
-    -moz-transition: all 3s ease-in-out; /** Firefox **/
-    -o-transition: all 3s ease-in-out; /** Opera **/
-		display:none;
-}
-
-.upupupup{
-	cursor: pointer;
-}
-
-.high{
-	margin-top:-1000px;
-	display: block;
+div{
+margin-left: 50px;
 }
