@@ -1,0 +1,33 @@
+﻿Mode d’emploi GitHub
+====================
+
+cd ‘chemin’ (glisser déposé le dossier)
+-> cd /Users/julesvaulont/Sites/href
+
+git pull (récupérer les dernières modifications)
+-> git pull
+
+git add . (ajouter mes modifications)
+ou git add  ‘chemin’ (pour cibler le dossier que je veux modifier)
+-> git add .
+-> git add  ‘formulaire/fourmulaire-test/Caca.txt’
+-> git add 'formulaire/fourmulaire-test/.'
+
+git status (vérification)
+-> git status
+
+git commit -m ‘amélioration du formulaire’
+-> git commit -m
+
+git push
+-> git commit -m
+
+git log (voir les derniers commits)
+
+•••••••••
+
+cd .. (revenir en arrière, reculer d’un dossier, précédent)
+-> cd ..
+
+git clone ‘url’ (récupérer un git)
+-> git clone 'https://github.com/EtienneOz/href'
