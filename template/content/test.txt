@@ -1,0 +1,13 @@
+Prénom = test
+Nom = test
+Site(s) = 
+École(s) = 
+Discipline(s) = 
+Lieu(x) = 
+Nom du projet1 = 
+Site(s) du Projet1 = 
+Thème(s) du Projet1 = 
+Médium(s) = 
+Référence(s) théorique(s) du Projet1 = 
+Référence(s) pratique(s) du Projet1 = 
+Collaborateur(s) du projet1 = 

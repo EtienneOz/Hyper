@@ -1,0 +1,171 @@
+/* GÉNÉRAL
+---------------------------------------- */ 
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+	width:100%;
+	height: 800px;
+	font-family: helvetica, sans-serif;
+}
+
+h1 {
+	font-size: 2em;
+
+}
+
+h2 {
+	font-size: 1em;
+
+}
+
+a {
+	color: #000;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+a:hover {
+	font-weight: bold;
+}
+
+/* HEADER 
+---------------------------------------- */
+	.logo-title {
+		padding: 10px 20px;
+
+	}
+
+/* MENU
+---------------------------------------- */
+
+nav {
+
+	margin-top: 10px;
+}
+
+nav li{
+	list-style: none;
+	display: inline-block;
+	margin-left: 35px;
+	text-decoration: underline; 
+}
+
+nav li:last-child{
+	float: right;
+	margin-right: 35px;
+}
+
+/* HOME PAGE 
+---------------------------------------- */ 
+
+section#left {
+ width:49%;
+ display: inline-block;
+ border-right: 5px solid #000;
+ height: 800px;
+ vertical-align: top;
+ overflow: scroll;
+}
+
+
+section#right{
+	width:49%;
+	display: inline-block;
+	border-right: 5px solid #000;
+	height: 800px;
+	vertical-align: top;
+	overflow: scroll;
+}
+
+/* TAGS (LEFT COLONNE)
+---------------------------------------- */ 
+.tags {
+	margin-top: 30px;
+}
+
+.tags ul {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 60px;
+}
+
+.tags h2 {
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+
+.tags ul li {
+	list-style: none;
+	margin-bottom: 9px;
+}
+
+.tags ul li label {
+	margin-left: 5px;
+}
+
+/* CONTENT (RIGHT COLONNE)
+---------------------------------------- */ 
+.content{
+	margin: 50px 60px;
+} 
+
+.content h1 {
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 1em;
+	text-decoration: underline;
+}
+
+.content ul {
+	margin-bottom: 20px;
+}
+
+.content li {
+	list-style: none;
+}
+
+
+/*FORMULAIRE
+---------------------------------------- */  
+form {
+	margin: 20px;
+}
+
+form input {
+  border: 1px gray dotted;
+  margin-left: 25px;
+  font-family: monospace;
+  font-size:14px;
+  word-spacing: -3px;
+  color: gray;
+  padding: 5px;
+}
+
+input#save_data{
+color: black;
+font-family: arial;
+letter-spacing: 5px;
+text-transform: uppercase;
+cursor: pointer;
+margin-left: 0px;
+border: 0px;
+}
+
+/* ABOUT
+---------------------------------------- */ 
+.about {
+	margin: 20px;
+	width: 50%;
+}
+
+
+
