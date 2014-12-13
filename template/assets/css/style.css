@@ -1,5 +1,5 @@
 /* GÉNÉRAL
----------------------------------------- */ 
+---------------------------------------- */
 
 * {
 	margin: 0;
@@ -8,12 +8,10 @@
 }
 
 html {
-  height: 100%;
 }
 
 body {
 	width:100%;
-	height: 800px;
 	font-family: helvetica, sans-serif;
 }
 
@@ -37,7 +35,7 @@ a:hover {
 	font-weight: bold;
 }
 
-/* HEADER 
+/* HEADER
 ---------------------------------------- */
 	.logo-title {
 		padding: 10px 20px;
@@ -56,7 +54,7 @@ nav li{
 	list-style: none;
 	display: inline-block;
 	margin-left: 35px;
-	text-decoration: underline; 
+	text-decoration: underline;
 }
 
 nav li:last-child{
@@ -64,16 +62,17 @@ nav li:last-child{
 	margin-right: 35px;
 }
 
-/* HOME PAGE 
----------------------------------------- */ 
+/* HOME PAGE
+---------------------------------------- */
 
 section#left {
  width:49%;
  display: inline-block;
  border-right: 5px solid #000;
- height: 800px;
+ height: 100%;
  vertical-align: top;
- overflow: scroll;
+ overflow-y: scroll;
+
 }
 
 
@@ -81,13 +80,15 @@ section#right{
 	width:49%;
 	display: inline-block;
 	border-right: 5px solid #000;
-	height: 800px;
+	height: 100%;
 	vertical-align: top;
-	overflow: scroll;
+	overflow-y: scroll;
+	float: right;
+
 }
 
 /* TAGS (LEFT COLONNE)
----------------------------------------- */ 
+---------------------------------------- */
 .tags {
 	margin-top: 30px;
 }
@@ -113,10 +114,10 @@ section#right{
 }
 
 /* CONTENT (RIGHT COLONNE)
----------------------------------------- */ 
+---------------------------------------- */
 .content{
 	margin: 50px 60px;
-} 
+}
 
 .content h1 {
 	text-transform: uppercase;
@@ -135,7 +136,7 @@ section#right{
 
 
 /*FORMULAIRE
----------------------------------------- */  
+---------------------------------------- */
 form {
 	margin: 20px;
 }
@@ -161,11 +162,8 @@ border: 0px;
 }
 
 /* ABOUT
----------------------------------------- */ 
+---------------------------------------- */
 .about {
 	margin: 20px;
 	width: 50%;
 }
-
-
-
