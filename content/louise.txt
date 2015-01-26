@@ -1,30 +1,31 @@
-# Fiche générée par la soumission du formulaire, les données sont séparées
+# Fiche générée par la soumission du formulaire les données sont séparées
 # par des virgules.
-# Pour les références, données en deux valeurs auteur et œuvre, à indiquer
-# comme ceci: Références du projet1 = [auteur, œuvre], [auteur, œuvre].
-# L'œuvre est optionnelle.
+# Pour les références données en deux valeurs auteur et œuvre à indiquer
+# comme ceci: Références du projet1 = [auteur == œuvre] [auteur == œuvre].
+# L'œuvre est optionnelle mais il doit toujours figurer le ' == '.
 
-Nom = Drulhe
-Prénom = Louise
-Sites = http://louisedrulhe.fr
-Écoles = EnsAD
-Disciplines = Design Graphique
-Lieux = Paris
-Projet1 = Design Fluide
-	Résumé1 = Untitled
-	Description1 = Untitled
-	Sites1  = http://louisedrulhe.fr/designfluide
-	Thèmes1 = Design fluide, Biens communs, Open-source, Métadonnées, Mème Internet, Web sémantique, Contribution
-	Médiums1 = Édition, Site web, Théorie
-	RéférencesThéoriques1 = [Bernard Stiegler], [Pierre Levy], [Sébastien Broca], [Boris Beaude], [James Surowiecki], [Metahaven]
-	RéférencesPratiques1 =
+Nom = [Drulhe]
+Prénom = [Louise]
+Sites = [http://louisedrulhe.fr]
+Écoles = [EnsAD]
+Disciplines = [Design graphique]
+Lieux = [Paris]
+Nombre de projets = 2
+Projet1 = [Design Fluide]
+	Résumé1 = [Untitled]
+	Description1 = [Untitled]
+	Sites1  = [http://louisedrulhe.fr/designfluide]
+	Thèmes1 = [Design fluide] [Biens communs] [Open-source] [Métadonnées] [Mème Internet] [Web sémantique] [Contribution]
+	Médiums1 = [Éditions] [Sites web] [Théorie]
+	Références théoriques1 = [Bernard Stiegler == ] [Pierre Levy == ] [Sébastien Broca == ] [Boris Beaude == ] [James Surowiecki == ] [Metahaven == ]
+	Références pratiques1 =
 	Collaborateurs1 =
-Projet2 = Altas d'Internet
-	Résumé1 = Untitled
-	Description1 = Untitled
-	Sites2 = http://louisedrulhe.fr/lab
-	Thèmes2 = Internet, Exercice conceptuel, Spatialisation, Atlas, Critique, Complexité, Contraintes
-	Médiums2 = Cartes, Editions, Installations
-	RéférencesThéoriques2 = [Boris Beaude], [Hérodote]
-	RéférencesPratiques2 = Untitled
-	Collaborateurs2 = Untitled
+Projet2 = [Atlas d'Internet]
+	Résumé1 = [Untitled]
+	Description1 = [Untitled]
+	Sites2 = [http://louisedrulhe.fr/lab]
+	Thèmes2 = [Internet] [Exercice conceptuel] [Spatialisation] [Atlas] [Critique] [Complexité] [Contraintes]
+	Médiums2 = [Cartes] [Éditions] [Installations]
+	Références théoriques2 = [Boris Beaude == ] [Hérodote == ]
+	Références pratiques2 = [Untitled]
+	Collaborateurs2 = [Untitled]

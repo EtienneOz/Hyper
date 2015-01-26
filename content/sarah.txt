@@ -1,20 +1,21 @@
 # Fiche générée par la soumission du formulaire, les données sont séparées
 # par des virgules.
 # Pour les références, données en deux valeurs auteur et œuvre, à indiquer
-# comme ceci: Références du projet1 = [auteur, œuvre], [auteur, œuvre].
-# L'œuvre est optionnelle.
+# comme ceci: Références du projet1 = [auteur == œuvre], [auteur == œuvre].
+# L'œuvre est optionnelle mais il doit toujours figurer le ' == '.
 
-Nom = Garcin
-Prénom = Sarah
-Sites = http://sarahgarcin.com
-Écoles = EnsAD
-Disciplines = Design graphique
-Lieux = Paris
-Projet1 = Ping
-	Résumé1 = Untitled
-	Description1 = Untitled
-	Sites1  = http://c.sarahgarcin.com
-	Thèmes1 = Logiciels libre, Collaboration, Prise de notes, Documentation
-	Médiums1 = Web
-	RéférencesThéoriques1 = [Ivan Illich, La convivialité], [Gilbert Simondon, Du Mode d’existence des objets techniques]
-	Collaborateurs1 =Victor Lebeau
+Nom = [Garcin]
+Prénom = [Sarah]
+Sites = [http://sarahgarcin.com]
+Écoles = [EnsAD]
+Disciplines = [Design graphique]
+Lieux = [Paris]
+Nombre de projets = 1
+Projet1 = [Ping]
+	Résumé1 = [Untitled]
+	Description1 = [Untitled]
+	Sites1  = [http://c.sarahgarcin.com]
+	Thèmes1 = [Collaboration] [Prise de notes] [Documentation] [Logiciel libre]
+	Médiums1 = [Web]
+	Références théoriques1 = [Ivan Illich == La convivialité] [Gilbert Simondon == Du Mode d’existence des objets techniques]
+	Collaborateurs1 = [Victor Lebeau]

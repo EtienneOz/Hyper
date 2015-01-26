@@ -1,38 +1,39 @@
 # Fiche générée par la soumission du formulaire, les données sont séparées
 # par des virgules.
 # Pour les références, données en deux valeurs auteur et œuvre, à indiquer
-# comme ceci: Références du projet1 = [auteur, œuvre], [auteur, œuvre].
+# comme ceci: Références du projet1 = [auteur == œuvre] [auteur == œuvre].
 # L'œuvre est optionnelle.
 
 
-Nom = Ozeray
-Prénom = Étienne
-Sites = http://etienneozeray.fr, http://github.com/EtienneOz
-Écoles = EnsAD
-Disciplines = Design graphique, programmation
-Lieux = Paris, Bruxelles
-Projet1 = Pour un design graphique libre
-	Résumé1 = Mémoire sur les relations entre culture libre et design graphique
-	Description1 = Mémoire sur les relations entre culture libre et design graphique à travers trois paradigmes: la créativité technique, l'autonomie dans le travail et la libre circulation de l'information
-	Sites1  = http://etienneozeray.fr/libre-blog
-	Thèmes1 = Libre, open-source, design graphique, mémoire, outils
-	Médiums1 = Livre, Écrit, Site web
-	RéférencesThéoriques1 = [Ivan Illich, La Convivialité], [Sébastien Broca, Utopie du logiciel libre], [OSP, Relearn], [Richard Stallman], [Bernard Stiegler], [Anthony Masure, Le design des programmes], [Antoine Gelgon, Documenter les productions en design graphique], [Victor Papanek, Design pour un monde réel], [Laslo Moholy Nagy, Peinture photographie, film], [OSP, Relearn]
-	RéférencesPratiques1 = [OSP], [Lafkon], [Xavier Klein], [Antoine Gelgon], [Raphaël Bastide]
+Nom = [Ozeray]
+Prénom = [Étienne]
+Sites = [http://etienneozeray.fr] [http://github.com/EtienneOz]
+Écoles = [EnsAD]
+Disciplines = [Design graphique] [Programmation]
+Lieux = [Paris] [Bruxelles]
+Nombre de projets = 3
+Projet1 = [Pour un design graphique libre]
+	Résumé1 = [Mémoire sur les relations entre culture libre et design graphique]
+	Description1 = [Mémoire sur les relations entre culture libre et design graphique à travers trois paradigmes: la créativité technique, l'autonomie dans le travail et la libre circulation de l'information.]
+	Sites1  = [http://etienneozeray.fr/libre-blog]
+	Thèmes1 = [Libre] [Logiciel libre] [Open-source] [Design graphique] [Mémoire] [Outils]
+	Médiums1 = [Éditions] [Écrits] [Sites web]
+	Références théoriques1 = [Ivan Illich == La convivialité] [Sébastien Broca == Utopie du logiciel libre] [Open Source Publishing == Relearn] [Richard Stallman == ] [Bernard Stiegler == ] [Anthony Masure == Le design des programmes] [Antoine Gelgon == Documenter les productions en design graphique] [Victor Papanek == Design pour un monde réel] [Laslo Moholy Nagy == Peinture, photographie, film]
+	Références pratiques1 = [Open Source Publishing == ] [Lafkon == ] [Xavier Klein == ] [Antoine Gelgon == ] [Raphaël Bastide == ]
 	Collaborateurs1 =
-Projet2 = Interstices
-	Résumé1 = Diplôme de fin d'étude
-	Description1 = Diplôme de fin d'étude autour d'un design graphique basé sur l'échange, le partage et la contribution.
-	Sites2 = http://interstices.io
-	Thèmes2 = Libre, open-source, collaboration, autonomie, outils, ouverture, contribution, échange, partage
-	Médiums2 = Livres, Écrits, Sites web, outils
-	RéférencesThéoriques2 = [Ivan Illich, La Convivialité], [Sébastien Broca, Utopie du logiciel libre], [OSP, Relearn], [Bernard Stiegler], [Victor Papanek, Design pour un monde réel], [Laslo Moholy Nagy, Peinture photographie, film], [OSP, Relearn]
-	RéférencesPratiques2 = [Thomas Hirschorn, Flamme éternelle], [A.A.A. Corp]
-	Collaborateurs2 = Alexandre Liziard
-Projet3 = Boxon
-	Sites3 = http://boxon.info
-	Thèmes3 = Libre, open-source, collaboration, outils, ouverture, contribution, échange
-	Médiums3 = Sites web, Outils, Écrits
-	RéférencesThéoriques3 = [Ivan Illich, La Convivialité], [Sébastien Broca, Utopie du logiciel libre], [OSP, Relearn]
-	RéférencesPratiques3 = [Git]
-	Collaborateurs3 = Antoine Gelgon, Xavier Klein, Ivan Murit, Alexandre Cornier
+Projet2 = [Interstices]
+	Résumé1 = [Diplôme de fin d'étude]
+	Description1 = [Diplôme de fin d'étude autour d'un design graphique basé sur l'échange, le partage et la contribution.]
+	Sites2 = [http://interstices.io]
+	Thèmes2 = [Libre] [open-source] [collaboration] [autonomie] [outils] [ouverture] [contribution] [échange] [partage]
+	Médiums2 = [Éditions] [Écrits] [Sites web]
+	Références théoriques2 = [Ivan Illich == La convivialité] [Sébastien Broca == Utopie du logiciel libre] [Open Source Publishing == Relearn] [Bernard Stiegler == ] [Victor Papanek == Design pour un monde réel] [Laslo Moholy Nagy == Peinture, photographie, film]
+	Références pratiques2 = [Thomas Hirschorn == Flamme éternelle] [A.A.A. Corp == ]
+	Collaborateurs2 = [Alexandre Liziard]
+Projet3 = [Boxon]
+	Sites3 = [http://boxon.info]
+	Thèmes3 = [Libre] [open-source] [collaboration] [outils] [ouverture] [contribution] [échange]
+	Médiums3 = [Sites web] [Écrits]
+	Références théoriques3 = [Ivan Illich == La convivialité] [Sébastien Broca == Utopie du logiciel libre] [Open Source Publishing == Relearn]
+	Références pratiques3 = [Git == ]
+	Collaborateurs3 = [Antoine Gelgon] [Xavier Klein] [Ivan Murit] [Alexandre Cornier]

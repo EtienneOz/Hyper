@@ -11,112 +11,303 @@
 	<?php
 
     // DEBUG
-    //error_reporting(E_ALL | E_STRICT);
+    error_reporting(E_ALL | E_STRICT);
 		ini_set('display_errors', 1);
 
-    // --------------
-    // -- FONCTION --
-    // --------------
-    function search_data($search){
-        //scan every files in a directory
+
+    // ----------------------------------------------------------
+    // Fonction pour afficher et regrouper le contenu des projets
+    // ----------------------------------------------------------
+
+    function displayContents($search){
+
+      // Scanner chaque fichier du répertoire
       $files = scandir('../content/');
-      foreach($files as $file) {
+      foreach($files as $file){
+        // Zapper ceux qui ne nous intéresse pas
         if ($file == '.') continue;
         if ($file == '..') continue;
-        // file() loads the contents of all files
-        $fileContents = file('../content/'.$file);
-        // Put content into an array, $lines
-        // each line in the file becomes a seperate element of the array.
-        $lines = $fileContents;
-        // now loop through the array to print the contents of the file
-        foreach ($lines as $line){
-          if(strpos($line, $search) !== false) {
-            list(, $datas) = explode("=", $line);
-            $datas = explode(",", $datas);
-            // remove the space before the first name
+        if ($file == 'model.txt') continue;
+        $lines = file('../content/'.$file); // Découper le fichier en lignes
+
+        // Récupérer le nombre de projets
+        foreach($lines as $line){
+          if (strpos($line, 'Nombre de projets =') !== false) {
+            $nb = str_replace('Nombre de projets =', '', $line);
+            $nb = substr_replace($nb, '', 0, 1); // Retirer l'espace précédant le chiffre
           }
         }
-        foreach($datas as $data){
-          $data = trim($data);
-          if (isset($data) && $data !== 'Untitled'){
-            echo '<li>' .$data. '</li>';
+
+        // Récupérer les données relatives à la recherche
+        for ($i=1; $i<=$nb; $i++){
+          foreach($lines as $line){
+            if (strpos($line, $search.$i) !== false) {
+              $datas = str_replace($search.$i, '', $line);
+              $datas = substr_replace($datas, '', 0, 2); // Retirer l'espace précédant la première donnée
+              $datas = explode(" [", $datas); // découpe
+              $datas = str_replace(']', '', $datas); // Clean
+              $datas = preg_replace('/\n/', '', $datas); // Retirer le saut de ligne suivant la dernière donnée
+            }
           }
-        }
+
+            // Remplir l'array
+            $allDatas[] = $datas;
+
+          } // Fin for
+
+        // Aplatir l'array du fichier et retirer les doublons
+        $allDatasFlat = iterator_to_array(new RecursiveIteratorIterator(new RecursiveArrayIterator($allDatas)), 0);
+        $allDatasFlat = array_unique($allDatasFlat);
+
+      } // Fin foreach files
+
+      // Aplatir l'array global
+      $flat = iterator_to_array(new RecursiveIteratorIterator(new RecursiveArrayIterator($allDatasFlat)), 0);
+
+      // Nettoyage
+      foreach ($flat as $data){
+        if (preg_match('/\[/',$data)) $data = str_replace('[', '', $data);
+        if ($data == 'Untitled') continue;
+        if ($data == '=') continue;
+        // Capitaliser la première lettre, tenant compte des accents
+        // /!\ À revoir, en l'état capitalise la première lettre de chaque mot
+        $data = mb_convert_case($data, MB_CASE_TITLE, "UTF-8");
+        $dataOk[] = $data;
       }
+
+      // Retirer les doublons
+      $result = array_unique($dataOk);
+
+      // Trier alphabétiquement en tenant compte des accents
+      setlocale(LC_COLLATE, 'fr_FR.utf8');
+      usort($result, 'strcoll');
+
+      // Affichage par liste
+      echo '<ul style="float: left; width: 22%"><h3>';
+      echo $search;
+      $nb = count($result);
+      echo ' (' .$nb. ')</h3>';
+        foreach($result as $data){
+          echo '<li>'.$data.'</li>';
+        }
+      echo '</ul>';
+
     }
 
-    // -----------------------------------
-    // -- FONCTION SPÉCIALE 2 VARIABLES --
-    // -----------------------------------
-    function search_datas($search1, $search2){
-      //scan every files in a directory
+    // --------------------------------------------------
+    // Fonction pour afficher et regrouper les références
+    // --------------------------------------------------
+
+    function displayContentReferences($search){
+
+      // Scanner chaque fichier du répertoire
       $files = scandir('../content/');
-      foreach($files as $file) {
+      foreach($files as $file){
+        // Zapper ceux qui ne nous intéresse pas
         if ($file == '.') continue;
         if ($file == '..') continue;
-        // file() loads the contents of all files
-        $fileContents = file('../content/'.$file);
-        // Put content into an array, $lines
-        // each line in the file becomes a seperate element of the array.
-        $lines = $fileContents;
-        // now loop through the array to print the contents of the file
-        foreach ($lines as $line){
-          if(strpos($line, $search1) !== false) {
-            list(, $data1) = explode("=", $line);
-            // remove the space before the first name
-            $data1 = trim($data1);
-          }
-          if(strpos($line, $search2) !== false) {
-            list(, $data2) = explode(" =", $line);
-            // remove the space before the first name
-            $data2 = trim($data2);
-          }
-        }
-        if (isset($data1) && $data1 != 'Untitled'){
-          echo '<li>' .$data2. ' ' .$data1. '</li>';
-        }
-      }
-    }
+        if ($file == 'model.txt') continue;
 
-    // NOM PRÉNOM
-    echo '<h1>noms Prenoms</h1>';
-    echo '<ul class="nomsPrenoms">';
-      search_datas('Prénom =', 'Nom =');
-    echo '</ul>';
-    // SITES
-    echo '<h1>sites</h1>';
-    echo '<ul class="sites">';
-      search_data('Sites =');
-    echo '</ul>';
-    // ÉCOLES
-    echo '<h1>ecoles</h1>';
-    echo '<ul class="ecoles">';
-      search_data('Écoles =');
-    echo '</ul>';
-    // DISCIPLINES
-    echo '<h1>disciplines</h1>';
-    echo '<ul class="disciplines">';
-      search_data('Disciplines =');
-    echo '</ul>';
-    // LIEUX
-    echo '<h1>lieux</h1>';
-    echo '<ul class="lieux">';
-      search_data('Lieux =');
-    echo '</ul>';
-    // PROJETS
-    echo '<h1>projets</h1>';
-    echo '<ul class="projets">';
-      search_data('Projet1 =');
-      search_data('Projet3 =');
-      search_data('Projet2 =');
-    echo '</ul>';
-    // MOTS CLEFS
-    echo '<h1>Mots Clefs</h1>';
-    echo '<ul class="motsClefs">';
-      search_data('Thèmes1 =');
-      search_data('Thèmes2 =');
-      search_data('Thèmes3 =');
-    echo '</ul>';
+        $lines = file('../content/'.$file); // Découper le fichier en lignes
+
+        // Récupérer le nombre de projets
+        foreach($lines as $line){
+          if (strpos($line, 'Nombre de projets =') !== false) {
+            $nb = str_replace('Nombre de projets =', '', $line);
+            $nb = substr_replace($nb, '', 0, 1); // Retirer l'espace précédant le chiffre
+          }
+        }
+
+        // Récupérer les données relatives à la recherche
+        for ($i=1; $i<=$nb; $i++){
+          foreach($lines as $line){
+            if (strpos($line, $search.$i) !== false) {
+              $datas = str_replace($search.$i, '', $line);
+              $datas = substr_replace($datas, '', 0, 2); // Retirer l'espace précédant la première donnée
+              $datas = explode(" [", $datas); // découpe
+              $datas = str_replace(']', '', $datas); // Clean
+              $datas = preg_replace('/\n/', '', $datas); // Retirer le saut de ligne suivant la dernière donnée
+              // Découper par auteur et par œuvre
+              $auteurs = preg_replace('/\=\=.*/', '', $datas);
+              $oeuvres = preg_replace('/.*\=\=/', '', $datas);
+            }
+          }
+
+            // Remplir les arrays
+            $allAuteurs[] = $auteurs;
+            $allOeuvres[] = $oeuvres;
+
+          } // Fin for
+
+        // Aplatir les arrays du fichier et retirer les doublons
+        $allAuteursFlat = iterator_to_array(
+          new RecursiveIteratorIterator(new RecursiveArrayIterator($allAuteurs)), 0
+        );
+        $allAuteursFlat = array_unique($allAuteursFlat);
+        $allOeuvresFlat = iterator_to_array(
+          new RecursiveIteratorIterator(new RecursiveArrayIterator($allOeuvres)), 0
+        );
+        $allOeuvresFlat = array_unique($allOeuvresFlat);
+
+      } // Fin foreach files
+
+      // Aplatir les arrays globaux
+      $flatAuteurs = iterator_to_array(
+        new RecursiveIteratorIterator(new RecursiveArrayIterator($allAuteursFlat)), 0
+        );
+      $flatOeuvres = iterator_to_array(
+        new RecursiveIteratorIterator(new RecursiveArrayIterator($allOeuvresFlat)), 0
+      );
+
+      // Nettoyage auteurs
+      foreach ($flatAuteurs as $data){
+        if (preg_match('/\[/',$data)) $data = str_replace('[', '', $data);
+        if ($data == 'Untitled') continue;
+        if ($data == '=') continue;
+        if ($data == ' ') continue;
+        // Capitaliser la première lettre, tenant compte des accents
+        // /!\ À revoir, en l'état capitalise la première lettre de chaque mot
+        $data = mb_convert_case($data, MB_CASE_TITLE, "UTF-8");
+        $auteursOk[] = $data;
+      }
+      // Nettoyage œuvres
+      foreach ($flatOeuvres as $data){
+        if (preg_match('/\[/',$data)) $data = str_replace('[', '', $data);
+        if ($data == 'Untitled') continue;
+        if ($data == '=') continue;
+        if ($data == ' ') continue;
+        // Capitaliser la première lettre, tenant compte des accents
+        // /!\ À revoir, en l'état capitalise la première lettre de chaque mot
+        $data = mb_convert_case($data, MB_CASE_TITLE, "UTF-8");
+        $oeuvresOk[] = $data;
+      }
+
+      // Retirer les doublons
+      $resultAuteurs = array_unique($auteursOk);
+      $resultOeuvres = array_unique($oeuvresOk);
+
+      // Trier alphabétiquement en tenant compte des accents
+      setlocale(LC_COLLATE, 'fr_FR.utf8');
+      usort($resultAuteurs, 'strcoll');
+      usort($resultOeuvres, 'strcoll');
+
+      // Affichage des auteurs par liste
+      echo '<ul style="float: left; width: 22%"><h3>';
+      echo $search.', auteurs';
+      $nb = count($resultAuteurs);
+      echo ' (' .$nb. ')</h3>';
+        foreach($resultAuteurs as $data){
+          echo '<li>'.$data.'</li>';
+        }
+      echo '</ul>';
+
+      // Affichage des œuvres par liste
+      echo '<ul style="float: left; width: 22%"><h3>';
+      echo $search.', œuvres';
+      $nb = count($resultOeuvres);
+      echo ' (' .$nb. ')</h3>';
+        foreach($resultOeuvres as $data){
+          echo '<li>'.$data.'</li>';
+        }
+      echo '</ul>';
+
+    } // Fin Fonction
+
+    // ------------------------------------------------------
+    // Fonction pour afficher et regrouper le contenu général
+    // ------------------------------------------------------
+
+    function displayContent($search){
+
+      // Scanner chaque fichier du répertoire
+      $files = scandir('../content/');
+      foreach($files as $file){
+        // Zapper ceux qui ne nous intéressent pas
+        if ($file == '.') continue;
+        if ($file == '..') continue;
+        if ($file == 'model.txt') continue;
+        // Découper le fichier en lignes
+        $lines = file('../content/'.$file);
+
+        // Récupérer les données relatives à la recherche
+        foreach($lines as $line){
+          if (strpos($line, $search) !== false) {
+            $datas = str_replace($search, '', $line);
+            $datas = substr_replace($datas, '', 0, 3); // Retirer l'espace précédant la première donnée
+            $datas = explode(" [", $datas); // Découpe
+            $datas = str_replace(']', '', $datas); // Clean
+            $datas = preg_replace('/\n/', '', $datas); // Retirer le saut de ligne suivant la dernière donnée
+
+          }
+        }
+
+        // Remplir l'array
+        $allDatas[] = $datas;
+
+      } // Fin foreach files
+
+      // Aplatir l'array
+      $flat = iterator_to_array(new RecursiveIteratorIterator(new RecursiveArrayIterator($allDatas)), 0);
+
+      // Nettoyage
+      foreach ($flat as $data){
+        if (preg_match('/\[/',$data)) $data = str_replace('[', '', $data);
+        if ($data == 'Untitled') continue;
+        if ($data == '=') continue;
+        $dataOk[] = $data;
+      }
+
+      // Supprimer les doublons
+      $result = array_unique($dataOk);
+
+      // Compter le nombre d'occurence de chaque donnée ----> EN COURS
+      $files = scandir('../content/');
+      // Zapper ceux qui ne nous intéressent pas
+      foreach($files as $file){
+        if ($file == '.') continue;
+        if ($file == '..') continue;
+        if ($file == 'model.txt') continue;
+        // echo $file.':<br/>';
+        // Récupérer le contenu du fichier
+        $content = file_get_contents('../content/'.$file);
+        // Comptage
+        foreach($result as $data){
+          // echo $data.': ';
+          $nbOccurence = substr_count($content, $data);
+          // echo $nbOccurence.'<br/>';
+          }
+        echo '<br/>';
+      }
+
+      // Trier alphabétiquement en tenant compte des accents
+      setlocale(LC_COLLATE, 'fr_FR.utf8');
+      usort($result, 'strcoll');
+
+      // Affichage de la liste
+      echo '<ul style="float: left; width: 22%"><h3>';
+      echo $search;
+      $nb = count($result);
+      echo ' (' .$nb. ')</h3>';
+        foreach($result as $data){
+          echo '<li>'.$data;
+          // echo ' ('.$nbOccurence.')';
+          echo '</li>';
+        }
+      echo '</ul>';
+
+    } // fin function
+
+    // Appel de la fonction pour général
+    displayContent('Écoles');
+    displayContent('Lieux');
+    displayContent('Disciplines');
+
+    // Appel de la fonction pour projets multiples
+    displayContents('Médiums');
+    displayContents('Thèmes');
+    displayContentReferences('Références théoriques');
+    displayContentReferences('Références pratiques');
+
 	?>
 
 </body>
