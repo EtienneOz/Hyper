@@ -1,0 +1,205 @@
+/* GÉNÉRAL
+---------------------------------------- */
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 15px;
+}
+
+html {
+}
+
+body {
+	width:100%;
+	font-family: monospace;
+}
+
+h1 {
+	font-size: 2em;
+
+}
+
+h2 {
+	font-size: 1em;
+
+}
+
+a {
+	color: #000;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+a:hover {
+	font-weight: bold;
+}
+
+/* HEADER
+---------------------------------------- */
+
+header{
+}
+
+.logo-title {
+	padding: 10px 20px;
+	background: white;
+	z-index: 100;
+	width: 46%;
+	display: inline-block;
+}
+
+/* MENU
+---------------------------------------- */
+
+nav {
+	margin-top: 10px;
+}
+
+nav li{
+	list-style: none;
+	display: inline-block;
+	margin-left: 35px;
+	text-decoration: underline;
+}
+
+nav li:last-child{
+	float: right;
+	margin-right: 35px;
+}
+
+/* HOME PAGE
+---------------------------------------- */
+
+#wrap{
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: -10;
+}
+
+section{
+	height: 100%;
+	width:49%;
+	display: inline-block;
+	vertical-align: top;
+	overflow-y: scroll;
+}
+
+section#left {
+ border-right: 5px solid #000;
+}
+
+
+section#right {
+	border-right: 5px solid #000;
+	float: right;
+
+}
+
+/* TAGS (LEFT COLONNE)
+---------------------------------------- */
+.tags {
+	margin-top: 60px;
+	margin-left: 30px;
+
+}
+
+.tags ul {
+	display: inline-block;
+	vertical-align: top;
+	margin: 30px;
+	margin-top: 0;
+	width: 40%;
+	float: left;
+}
+
+.tags h2 {
+	margin-bottom: 10px;
+}
+
+.tags ul li {
+	list-style: none;
+	margin-bottom: 9px;
+}
+
+.tags ul li label {
+	margin-left: 5px;
+}
+
+/* CONTENT (RIGHT COLONNE)
+---------------------------------------- */
+.content{
+	margin: 50px 60px;
+}
+
+.content h1 {
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 1em;
+	text-decoration: underline;
+}
+
+.content ul {
+	margin-bottom: 20px;
+}
+
+.content li {
+	list-style: none;
+}
+
+.fiche{
+		margin: 30px;
+}
+
+p{
+	margin-left: 30px;
+}
+
+.projet{
+	margin-left: 30px;
+}
+
+.projet ul{
+	margin-left: 30px;
+}
+
+.projet ul li{
+	list-style: none;
+	margin-left: 30px;
+}
+
+
+/*FORMULAIRE
+---------------------------------------- */
+form {
+	margin: 20px;
+}
+
+form input {
+  border: 1px gray dotted;
+  margin-left: 25px;
+  font-family: monospace;
+  font-size:14px;
+  word-spacing: -3px;
+  color: gray;
+  padding: 5px;
+}
+
+input#save_data{
+color: black;
+font-family: arial;
+letter-spacing: 5px;
+text-transform: uppercase;
+cursor: pointer;
+margin-left: 0px;
+border: 0px;
+}
+
+/* ABOUT
+---------------------------------------- */
+.about {
+	margin: 20px;
+	width: 50%;
+}
